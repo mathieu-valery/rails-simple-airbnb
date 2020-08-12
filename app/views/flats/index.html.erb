@@ -1,0 +1,33 @@
+<div class="container">
+<h1>This is our flats available:</h1>
+
+
+
+  <div class="d-flex">
+  <% @flats.each do |flat| %>
+
+    <div class="card mr-2" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="height: 4rem"><%= flat.name %></h5>
+        <p class="card-text" style="height: 18rem"><%= flat.description %></p>
+        <div class="details d-flex">
+          <div class="guests mr-2">
+            <p class="card-text"><i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
+          </div>
+          <div class="prices">
+            <p class="card-text"><i class="fas fa-euro-sign"></i><%= flat.price_per_night %></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+
+
+</div>
